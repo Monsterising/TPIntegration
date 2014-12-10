@@ -140,13 +140,12 @@ public class SerialPortServiceUtil {
 			 readBuffer = new byte[20];
 			 inPutStream.read(readBuffer);
 			 result =  new String(readBuffer);
-			 result.trim();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
-		return result.toString();
+		return result.trim();
 		
 	}
 	/*
