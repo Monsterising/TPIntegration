@@ -15,6 +15,11 @@ public class Application {
             public String getMessage() {
               return "Hello World!";
             }
+			@Override
+			public void setMessage(String message) {
+				// TODO Auto-generated method stub
+				System.out.println(message);
+			}
         };
     }
 	public static void main(String[] args) {
