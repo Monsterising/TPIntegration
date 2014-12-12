@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>inex</title>
+<title>index</title>
 </head>
 <body>
 the result is :
