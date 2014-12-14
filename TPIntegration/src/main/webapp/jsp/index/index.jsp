@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="/resources/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/TPIntegration/resources/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/TPIntegration/resources/css/style.css"/>
 
 <title>index</title>
 </head>

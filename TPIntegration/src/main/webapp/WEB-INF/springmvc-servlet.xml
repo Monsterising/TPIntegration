@@ -18,17 +18,19 @@
 
      <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 	
-	<!-- 对静态资源文件的访问 -->
+	<!-- 对静态资源文件的访问
+		此方法针对tomcat7.0不起作用
+	 -->
     <!--  
     <mvc:resources location="/TPIntegration/WEB-INF/resources/images/" mapping="/resources/**"  />
     <mvc:resources location="/TPIntegration/WEB-INF/resources/js/"  mapping="/resources/** "/>
-   -->
     <mvc:resources location="/resources/"  mapping="/resources/**" />
     <mvc:default-servlet-handler />
+      -->
 
      <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
          <property name="prefix">
-            <value>/WEB-INF/jsp/</value>
+            <value>/jsp/</value>
          </property>
         <property name="suffix">
              <value>.jsp</value>
