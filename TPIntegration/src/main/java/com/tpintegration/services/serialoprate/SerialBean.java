@@ -176,7 +176,7 @@ public class SerialBean {
 	         Timer timer  = new Timer();
 	         timer.schedule(new TimerTask(){
 	        	 public void run(){
-	        		 SB.WritePort(Msg4);
+	        		 SB.WritePort(initialMsg);
 	    	         System.out.println(SB.getMessage(12)); 
 	    	         SB.ClosePort();
 	        	 }
