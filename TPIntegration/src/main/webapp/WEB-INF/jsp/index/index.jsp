@@ -1,13 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css"/>
+
 <title>index</title>
 </head>
 <body>
-the result is :
-    ${command}
+ the result is :${command} <%=request.getContextPath()%>
+<div class="container" >
+<div id ="sideBar" class="col-xs-2">
+ </div>
+ 
+ <div id = "content" class="col-xs-10">
+ </div>
+</div>
+ 
 </body>
 </html>

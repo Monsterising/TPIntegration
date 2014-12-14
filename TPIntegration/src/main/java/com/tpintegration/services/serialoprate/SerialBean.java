@@ -162,7 +162,7 @@ public class SerialBean {
 	     
 	     public static void main(String[] args){
 	    	//TO DO: Add your JAVA codes here
-	         SerialBean SB = new SerialBean(4);
+	         SerialBean SB = new SerialBean(3);
 	         String initialMsg = "$L0!";
 	         String Msg = "$L211111111!";
 	         String Msg2 = "$L210101010!";
@@ -176,11 +176,19 @@ public class SerialBean {
 	         Timer timer  = new Timer();
 	         timer.schedule(new TimerTask(){
 	        	 public void run(){
-	        		 SB.WritePort(initialMsg);
+	        		 SB.WritePort(Msg4);
 	    	         System.out.println(SB.getMessage(12)); 
-	    	         SB.ClosePort();
+	    	         
 	        	 }
-	         }, 1000);
+	         }, 0,1000);
+	         
+	         timer.schedule(new TimerTask(){
+	        	 public void run(){
+	        		 SB.ClosePort();
+	    	         timer.cancel();
+	        	 }
+	         }, 5000);
+	        
 //	         SB.ClosePort();         
 	     }
 }
