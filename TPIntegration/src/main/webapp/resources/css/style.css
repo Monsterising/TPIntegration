@@ -1,3 +1,9 @@
-body{margin:0;
-	background:#000;
+#sideBar{
+	background:#FFCC99;
+	height:1000px;
+}
+
+#content{
+	background:#99CCCC;
+	height:1000px;
 }
