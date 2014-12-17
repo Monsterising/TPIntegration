@@ -7,5 +7,5 @@ package com.tpintegration.services.serialoprate;
  */
 public interface SerialBeanAdapter {
 	public void sendMessage(String msg);
-	public String getMessage();
+	public String getMessage(int length);
 }

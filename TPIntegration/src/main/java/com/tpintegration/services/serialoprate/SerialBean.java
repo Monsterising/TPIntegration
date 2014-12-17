@@ -12,15 +12,30 @@ import javax.comm.PortInUseException;
 import javax.comm.SerialPort;
 import javax.comm.UnsupportedCommOperationException;
 
-public class SerialBean {
+/**
+ * This class is to connect the SerialPort , sendMessage and getMessege
+ * from the SerialPort.
+ * @author Administrator
+ *
+ */
+public class SerialBean implements SerialBeanAdapter{
 	   static String PortName;
+	   //this API from comm.jar 
 	   CommPortIdentifier portId;
 	   SerialPort serialPort;
+	   
 	   static OutputStream out;
 	   static InputStream  in;
 	  
 	   SerialBuffer SB;
 	   ReadSerial   RT;
+	   
+	   //Params for SerialPort
+	   int databits =SerialPort.DATABITS_8;
+	   int stopbits = SerialPort.STOPBITS_1;
+	   int parity = SerialPort.PARITY_NONE;
+	 
+	   
 	     /**
 	      *
 	      * Constructor
@@ -41,7 +56,7 @@ public class SerialBean {
 	      * @param type 0 do not start the ReadSerial thread 
 	      * 			  type 1 start the ReadSerial thread
 	      */
-	     public int Initialize(int type)
+		public int Initialize(int type)
 	     {
 	       int InitSuccess = 1;
 	       int InitFail    = -1;
@@ -70,10 +85,7 @@ public class SerialBean {
 	       //Initialize the communication parameters to 9600, 8, 1, none.
 	       try
 	       {
-	          serialPort.setSerialPortParams(9600,
-	               SerialPort.DATABITS_8,
-	               SerialPort.STOPBITS_1,
-	               SerialPort.PARITY_NONE);
+	          serialPort.setSerialPortParams(9600,databits,stopbits,parity);
 	       } catch (UnsupportedCommOperationException e)
 	       {
 	    	 System.out.println("Initial params failed !!");
@@ -145,6 +157,10 @@ public class SerialBean {
 	    	   out.flush();
 	       } catch (IOException e)  {}
 	     }
+	     
+	     public void sendMessage(String Msg){
+	    	 this.WritePort(Msg);
+	     }
 	     /**
 	      *
 	      * This function closes the serial port in use.
@@ -191,4 +207,5 @@ public class SerialBean {
 	        
 //	         SB.ClosePort();         
 	     }
+		
 }
