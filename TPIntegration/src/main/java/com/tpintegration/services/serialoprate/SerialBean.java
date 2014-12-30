@@ -178,7 +178,7 @@ public class SerialBean implements SerialBeanAdapter{
 	     
 	     public static void main(String[] args){
 	    	//TO DO: Add your JAVA codes here
-	         SerialBean SB = new SerialBean(3);
+	         SerialBean SB = new SerialBean(5);
 	         String initialMsg = "$L0!";
 	         String Msg = "$L211111111!";
 	         String Msg2 = "$L210101010!";
