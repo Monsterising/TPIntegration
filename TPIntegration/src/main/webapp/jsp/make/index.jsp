@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -21,7 +23,7 @@
 			</div>
 	 		<div id="mainContent"class="" >
 	 				<div id="editArea" class="" ondrop="drop(event)" ondragover="allowDrop(event)">
-		 			<p>编辑部分</p>
+		 			<p>编辑部分</p>
 		 			</div>	
 	 		</div>
 
@@ -49,6 +51,7 @@
 <div id="com3_sub" class="com_sub">
 	start native app3: <input id="bt_com3" type="button"  value="Hello world!" onclick="bt_com3_click()" />
 </div>
+
 <!--底部固定-->
 <nav class="navbar navbar-default navbar-fixed-bottom footer" role="navigation">
 <p>底部预览窗口</p>
