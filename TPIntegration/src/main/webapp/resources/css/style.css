@@ -1,9 +1,69 @@
-#sideBar{
-	background:#FFCC99;
-	height:1000px;
+html,body {
+  height: 100%;
+ /* The html and body elements cannot have any padding or margin. */
+ }
+
+#wrap {
+	 min-height: 100%;
+	 height: 100%;
+     margin: 0 auto;
+     float: left;
+}
+#leftTB,#rightTB{
+	background:#87481f;
+	position: absolute;
+	width: 20%;
+	top: 0px;
+	bottom: 150px;
+}
+#leftTB{
+
+}
+#rightTB{
+	right: 0px;
+}
+#editArea{
+	background: #f15b6c;
+	position: absolute;
+	margin-left: 20%;
+	width: 60%;
+	top: 0px;
+	bottom: 150px;
 }
 
-#content{
-	background:#99CCCC;
-	height:1000px;
+.div_drag{
+	width:80px;
+	height:80px;
+	margin: 10px;
+	border:1px solid #000000;
+	float: left;
 }
+.com_sub{
+	width:400px;
+	height:50px;
+	margin: 10px;
+	background: red;
+	border:1px solid #000000;
+	display: none;
+	float: left;
+}
+
+
+.preview{
+	background: #FFF5EE;
+}
+/* Set the fixed height of the footer here */
+
+ .footer {
+    height: 150px;
+    background-color: #a1a3a6;
+}
+/* Lastly, apply responsive CSS fixes as necessary */
+  @media (max-width: 767px) {
+    .footer {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+ }
