@@ -65,7 +65,7 @@ public class MakeController {
 		         String fileLac = "";
 		         try {
 		            // fileLac = "D:\\Program Files (x86)\\Notepad++\\notepad++.exe";
-		        	 fileLac = "D:\\Program Files (x86)\\Youdao\\YoudaoNote\\YNotepad.exe";
+		        	 fileLac = "D:\\Program Files (x86)\\Sublime Text 3\\sublime_text.exe";
 		             p = rt.exec(fileLac);
 		         } catch (Exception e) {
 		             System.out.println("open failure");
